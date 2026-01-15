@@ -11,7 +11,7 @@ protected:
 public:
   Modo(PantallaLCD &l, LectorNFC &n, AlmacenSD &s, Reloj &r, Buzzer &b) : lcd(l), nfc(n), sd(s), reloj(r), buzzer(b) {}
   virtual void ejecutar() = 0;
-  virtual void alEntrar() {}
+  virtual void alEntrar() = 0;
   virtual void alSalir() { nfc.reset();}
   virtual ~Modo() {}
 };
